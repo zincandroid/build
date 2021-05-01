@@ -264,20 +264,21 @@ class EdifyGenerator(object):
     """Log a message to the screen (if the logs are visible)."""
     self.script.append('ui_print("%s");' % (message,))
 
-  def PrintPixelExperienceBanner(self, is_plus, android_version, build_id, build_date,
+  def PrintZincBanner(self, android_version, zinc_version, build_id, build_date,
                                   security_patch, device):
     self.Print("----------------------------------------------")
-    if is_plus:
-      self.Print("        PixelExperience (Plus edition)")
-      self.Print("                by jhenrique09")
-    else:
-      self.Print("              PixelExperience")
-      self.Print("              by jhenrique09")
+    #if is_plus:
+    #  self.Print("                ZincOS gapped")
+    #  self.Print("                By the zinc team")
+    #else:
+    self.Print("                   ZincOS")
+    self.Print("              By the zinc team")
     self.Print("----------------------------------------------")
-    self.Print(" Android version: %s"%(android_version))
-    self.Print(" Build id: %s"%(build_id))
-    self.Print(" Build date: %s"%(build_date))
-    self.Print(" Security patch: %s"%(security_patch))
+    self.Print(" Android Version: %s"%(android_version))
+    self.Print(" Zinc Version: %s"%(zinc_version))
+    self.Print(" Build ID: %s"%(build_id))
+    self.Print(" Build Date: %s"%(build_date))
+    self.Print(" Security Patch: %s"%(security_patch))
     self.Print(" Device: %s"%(device))
     self.Print("----------------------------------------------")
 
